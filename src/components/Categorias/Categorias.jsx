@@ -22,8 +22,8 @@ export const Categorias = () => {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to={"/category/juego"}>
-          <button className="btn btn-primary">Juego</button>
+        <Link className="nav-link" to={"/category/novela"}>
+          <button className="btn btn-primary">Novela</button>
         </Link>
       </li>
 

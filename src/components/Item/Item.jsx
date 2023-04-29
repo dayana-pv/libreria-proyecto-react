@@ -6,8 +6,8 @@ export const Item = ({ item }) => {
   console.log(item);
   return (
     <div
-      className="card border border-secondary m-2"
-      style={{ width: "18rem" }}
+      className="card border border-secondary m-4"
+      style={{ width: "21rem" }}
     >
       <img
         src={item.imagen}
