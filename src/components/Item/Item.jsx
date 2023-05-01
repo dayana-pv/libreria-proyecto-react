@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 
 //Recibir un objeto y devolverlo en forma de componente con esta plantilla
 export const Item = ({ item }) => {
-  console.log(item);
   return (
     <div
-      className="card border border-secondary m-4"
+      className="card border border-secondary m-4 p-0"
       style={{ width: "21rem" }}
     >
       <img
@@ -22,8 +21,11 @@ export const Item = ({ item }) => {
         <p className="card-text my-1">Precio: ${item.precio}</p>
         <p className="card-text my-1">Stock: {item.stock}</p>
 
-        <Link className="nav-link" to={`/product/${item.id}`}>
-          <button className="btn btn-primary">Ver Producto</button>
+        <Link
+          className="nav-link btn btn-primary p-2 my-2 text-white"
+          to={`/product/${item.id}`}
+        >
+          Ver Producto
         </Link>
       </div>
     </div>

@@ -14,9 +14,10 @@ export const ItemDetailContainer = () => {
         const prod = productos.find((prod) => prod.id === parseInt(id));
         setItem(prod);
       });
-  }, []);
+  }, [id]);
+  console.log(item);
   return (
-    <div className="card mb-3 container itemDetail">
+    <div className="card my-5 mx-6 container itemDetail">
       <ItemDetail item={item} />
     </div>
   );

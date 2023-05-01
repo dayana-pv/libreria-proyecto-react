@@ -13,9 +13,9 @@
     "imagen": "https://m.media-amazon.com/images/I/51U2m0naGNL.jpg",
     "nombre": "La biblioteca de los muertos",
     "autor": "Glenn Cooper",
-    "categoria": "ficcion",
+    "categoria": "misterio",
     "precio": 22,
-    "stock": 10
+    "stock": 6
   },
   {
     "id": 3,
@@ -24,15 +24,15 @@
     "autor": "Mario Vargas Llosa",
     "categoria": "novela",
     "precio": 17,
-    "stock": 10
+    "stock": 14
   },
   {
     "id": 4,
     "imagen": "https://m.media-amazon.com/images/I/51x8R0epKTL.jpg",
     "nombre": "La casa de los espiritus",
     "autor": "Isabel Allende",
-    "categoria": "terror",
-    "stock": 10
+    "categoria": "novela",
+    "stock": 9
   },
   {
     "id": 5,
@@ -57,9 +57,9 @@
     "imagen": "https://m.media-amazon.com/images/I/51lJkjllUpL.jpg",
     "nombre": "La ladrona de libros",
     "autor": "Markus Zusak",
-    "categoria": "ficcion",
+    "categoria": "novela",
     "precio": 25,
-    "stock": 10
+    "stock": 5
   },
   {
     "id": 8,
@@ -68,6 +68,6 @@
     "autor": "Eva García Sáenz de Urturi",
     "categoria": "ficcion",
     "precio": 19,
-    "stock": 10
+    "stock": 12
   }
 ]

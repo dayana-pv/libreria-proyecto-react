@@ -5,17 +5,18 @@ export const ItemCount = ({ ValInicial, min, max, onAdd }) => {
 
   return (
     <>
-      <button className="btn btn-primary" onClick={minus}>
+      <button className="btn btn-primary mx-2" onClick={minus}>
         -
       </button>
       {count}
-      <button className="btn btn-primary" onClick={sum}>
+      <button className="btn btn-primary mx-2" onClick={sum}>
         +
       </button>
-      <button className="btn btn-primary" onClick={reset}>
+      <button className="btn btn-primary mx-2 " onClick={reset}>
         Reset
       </button>
-      <button className="btn btn-light" onClick={() => onAdd(count)}>
+      <br />
+      <button className="btn btn-light my-4 " onClick={() => onAdd(count)}>
         Agregar al Carrito
       </button>
     </>

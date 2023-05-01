@@ -4,7 +4,7 @@ export const CartWidget = ({ cantCarrito }) => {
       <button className="btn btn-primary">
         <i className="fas fa-shopping-cart fa-lg"></i>
       </button>
-      <p>{cantCarrito}</p>
+      <p className="text-white">{cantCarrito}</p>
     </>
   );
 };
