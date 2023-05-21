@@ -25,7 +25,7 @@ export const Item = ({ item }) => {
           className="nav-link btn btn-primary p-2 my-2 text-white"
           to={`/product/${item.id}`}
         >
-          Ver Producto
+          Ver Libro
         </Link>
       </div>
     </div>

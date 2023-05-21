@@ -1,8 +1,12 @@
 import React from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
+import { useCarritoContext } from "../../context/CarritoContext";
 
 export const ItemDetail = ({ item }) => {
-  const onAdd = (contador) => {};
+  const { addItem } = useCarritoContext();
+  const onAdd = (contador) => {
+    addItem(item, contador);
+  };
   return (
     <div className="row g-0 m-4">
       <div className="col-md-6">

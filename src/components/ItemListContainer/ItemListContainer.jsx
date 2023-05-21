@@ -1,31 +1,29 @@
-//Consulto a mis productos de mi Base de datos y se los envio a ItemList
 import { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList.jsx";
 import { useParams } from "react-router-dom";
+import { getLibros } from "../../firebase/firebase.js";
 
 export const ItemListContainer = () => {
-  const [productos, setProductos] = useState([]);
+  const [libros, setLibros] = useState([]);
   const { category } = useParams();
 
   useEffect(() => {
     if (category) {
-      fetch("../json/productos.json")
-        .then((response) => response.json())
-        .then((productos) => {
-          const productoFiltrados = productos
-            .filter((prod) => prod.stock > 0)
-            .filter((prod) => prod.categoria === category);
-          setProductos(productoFiltrados);
-        });
+      getLibros().then((libros) => {
+        const libroFiltrados = libros
+          .filter((libro) => libro.stock > 0)
+          .filter((libro) => libro.categoria === category);
+        setLibros(libroFiltrados);
+      });
     } else {
-      fetch("./json/productos.json")
-        .then((response) => response.json())
-        .then((productos) => {
-          const productoFiltrados = productos.filter((prod) => prod.stock > 0);
-          setProductos(productoFiltrados);
-        });
+      getLibros().then((libros) => {
+        const libroFiltrados = libros.filter((libro) => libro.stock > 0);
+        setLibros(libroFiltrados);
+      });
     }
   }, [category]);
 
-  return <div className="row">{<ItemList productos={productos} />}</div>;
+  return (
+    <div className="row">{<ItemList libros={libros} plantilla={"Item"} />}</div>
+  );
 };

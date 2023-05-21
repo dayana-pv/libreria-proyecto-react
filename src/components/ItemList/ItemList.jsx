@@ -1,13 +1,13 @@
 import React from "react";
 import { Item } from "../Item/Item.jsx";
+import { ItemCart } from "../ItemCart/ItemCart";
 
-//Recibir un array de productos y a cada uno de esos productos los voy a transformar en un componente dada una plantilla
-export const ItemList = ({ productos }) => {
+export const ItemList = ({ libros, plantilla }) => {
   return (
     <>
-      {productos.map((producto) => (
-        <Item key={producto.id} item={producto} />
-      ))}
+      {plantilla === "Item"
+        ? libros.map((libro) => <Item key={libro.id} item={libro} />)
+        : libros.map((libro) => <ItemCart key={libro.id} item={libro} />)}
     </>
   );
 };
