@@ -6,17 +6,15 @@ export const Item = ({ item }) => {
   return (
     <div
       className="card border border-secondary m-4 p-0"
-      style={{ width: "21rem" }}
+      style={{ width: "19rem" }}
     >
       <img
         src={item.imagen}
-        className="card-img-top"
+        className="card-img-top rounded"
         alt={`imagen de ${item.nombre}`}
       />
       <div className="card-body">
-        <h5 className="card-title">
-          {item.nombre} {item.modelo}
-        </h5>
+        <h5 className="card-title">{item.nombre}</h5>
         <p className="card-text my-1">Autor: {item.autor}</p>
         <p className="card-text my-1">Precio: ${item.precio}</p>
         <p className="card-text my-1">Stock: {item.stock}</p>

@@ -16,9 +16,8 @@ export const ItemCart = ({ item }) => {
 
         <div className="col-md-8 ">
           <div className="card-body mx-4">
-            <h5 className="card-title">
-              {item.nombre} {item.modelo}
-            </h5>
+            <h4 className="card-title">{item.nombre}</h4>
+            <p className="card-title">Autor: {item.autor}</p>
             <p className="card-text">Cantidad: {item.quantity}</p>
             <p className="card-text">Precio Unitario: ${item.precio}</p>
             <p className="card-text">

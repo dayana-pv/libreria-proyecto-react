@@ -24,6 +24,8 @@ export const ItemListContainer = () => {
   }, [category]);
 
   return (
-    <div className="row">{<ItemList libros={libros} plantilla={"Item"} />}</div>
+    <div className="card-deck row mx-5 my-4">
+      {<ItemList libros={libros} plantilla={"Item"} />}
+    </div>
   );
 };

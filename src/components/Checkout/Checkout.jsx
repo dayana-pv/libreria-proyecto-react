@@ -59,7 +59,7 @@ export const Checkout = () => {
         toast(
           `🛒 Muchas gracias por comprar con nosotros, su ID de compra es ${
             ordenCompra.id
-          } por un total de ${totalPrice()}, en breve nos contactaremos para el envio`,
+          } por un total de $${totalPrice()}, en breve nos contactaremos para el envio`,
           {
             position: "top-right",
             autoClose: 5000,

@@ -34,12 +34,12 @@ export const Cart = () => {
                   Vaciar Carrito
                 </button>
                 <Link className="nav-link d-grid gap-2" to={"/"}>
-                  <button className="btn btn-dark my-2 py-3 ">
+                  <button className="btn btn-secondary my-2 py-3 ">
                     Continuar Comprando
                   </button>
                 </Link>
                 <Link className="nav-link d-grid gap-2" to={"/checkout"}>
-                  <button className="btn btn-secondary my-2 py-3 ">
+                  <button className="btn btn-light my-2 py-3 ">
                     Finalizar Compra
                   </button>
                 </Link>

@@ -10,7 +10,6 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     getLibro(id).then((libro) => {
-      //const libro = libros.find((libro) => libro.id === parseInt(id));
       setItem(libro);
     });
   }, [id]);
