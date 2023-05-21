@@ -12,7 +12,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "process.env.API_KEY",
   authDomain: "libreria-proyecto-react.firebaseapp.com",
   projectId: "libreria-proyecto-react",
   storageBucket: "libreria-proyecto-react.appspot.com",
