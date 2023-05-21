@@ -25,8 +25,18 @@ export const Checkout = () => {
           libroBBD.stock -= libroCarrito.quantity;
           updateLibro(libroBBD.id, libroBBD);
         } else {
-          console.log(
-            "El stock no es mayor o igual a la cantidad que se quiere comprar"
+          toast(
+            `El stock no es mayor o igual a la cantidad que se quiere comprar`,
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            }
           );
         }
       });
@@ -70,6 +80,7 @@ export const Checkout = () => {
         console.error(error);
       });
   };
+
   return (
     <>
       {carrito.length === 0 ? (
@@ -82,17 +93,28 @@ export const Checkout = () => {
       ) : (
         <div className="container divForm">
           <form onSubmit={consultarForm} ref={datForm}>
+            <h2 className="text-center m-4">DATOS DEL CLIENTE</h2>
             <div className="mb-3">
               <label htmlFor="nombre" className="form-label">
                 Nombre y Apellido
               </label>
-              <input type="text" className="form-control" name="nombre" />
+              <input
+                type="text"
+                className="form-control"
+                name="nombre"
+                required
+              />
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email
               </label>
-              <input type="email" className="form-control" name="email" />
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                required
+              />
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
@@ -102,25 +124,43 @@ export const Checkout = () => {
                 type="email"
                 className="form-control"
                 name="emailRepetido"
+                required
               />
             </div>
-            <div className="mb-3">
-              <label htmlFor="dni" className="form-label">
-                DNI
-              </label>
-              <input type="number" className="form-control" name="dni" />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="celular" className="form-label">
-                Numero Telefonico
-              </label>
-              <input type="number" className="form-control" name="celular" />
+            <div className="row mb-3">
+              <div className="col-sm-6">
+                <label htmlFor="dni" className="form-label">
+                  DNI
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  name="dni"
+                  required
+                />
+              </div>
+              <div className="col-sm-6">
+                <label htmlFor="celular" className="form-label">
+                  Numero Telefonico
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  name="celular"
+                  required
+                />
+              </div>
             </div>
             <div className="mb-3">
               <label htmlFor="direccion" className="form-label">
                 Direccion
               </label>
-              <input type="text" className="form-control" name="direccion" />
+              <input
+                type="text"
+                className="form-control "
+                name="direccion"
+                required
+              />
             </div>
             <button type="submit" className="btn btn-primary">
               Finalizar Compra

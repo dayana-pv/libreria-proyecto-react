@@ -1,0 +1,17 @@
+.itemDetail {
+  max-width: 740px;
+  margin-top: 10px;
+}
+
+.cantCarrito {
+  position: relative;
+  left: 15%;
+}
+
+.cartContainer {
+  margin-top: 3%;
+}
+
+.divForm {
+  margin-top: 20px;
+}

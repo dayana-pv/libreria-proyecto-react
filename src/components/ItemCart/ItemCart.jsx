@@ -4,8 +4,8 @@ import { useCarritoContext } from "../../context/CarritoContext";
 export const ItemCart = ({ item }) => {
   const { removeItem } = useCarritoContext();
   return (
-    <div className="card mb-3 cardCart">
-      <div className="row g-0">
+    <div className="card mb-3 mx-5 cardCart">
+      <div className="row  g-0">
         <div className="col-md-4">
           <img
             src={item.imagen}
@@ -14,8 +14,8 @@ export const ItemCart = ({ item }) => {
           />
         </div>
 
-        <div className="col-md-8">
-          <div className="card-body">
+        <div className="col-md-8 ">
+          <div className="card-body mx-4">
             <h5 className="card-title">
               {item.nombre} {item.modelo}
             </h5>
@@ -25,7 +25,7 @@ export const ItemCart = ({ item }) => {
               Subtotal: ${item.precio * item.quantity}
             </p>
             <button
-              className="btn btn-danger"
+              className="btn btn-primary"
               onClick={() => removeItem(item.id)}
             >
               <i className="fas fa-trash-alt"></i>
